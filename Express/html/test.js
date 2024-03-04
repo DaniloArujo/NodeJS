@@ -21,5 +21,8 @@ const Postagem = sequelize.define('postagens',{
     }
 })
 
-Postagem.sync({force:true})
 //usuarios
+
+
+
+//Postagem.sync({force:true})
