@@ -4,16 +4,16 @@ const PORT = 8081;
 
 
 app.get('/',(req, res) => {
-    res.send('Olá, mundo!')
+    res.sendFile(__dirname + "/html/index.html")
 })
 
 
-app.get('/ola/:nome/:cargo',(req, res) => {
+app.get('/ola/:nome',(req, res) => {
     res.send(`olá, ${req.params.nome}`)
 })
 
 app.get('/sobre',(req, res) => {
-    res.send('sobre')
+    res.sendFile(__dirname + "/html/sobre.html")
 })
 
 app.listen(PORT, ()=>{
