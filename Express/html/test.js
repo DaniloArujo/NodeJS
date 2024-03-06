@@ -39,5 +39,5 @@ const Usuario = sequelize.define('usuarios',{
 })
 
 
-
 //Postagem.sync({force:true})
+//Usuario.sync({force:true})
