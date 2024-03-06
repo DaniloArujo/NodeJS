@@ -1,19 +1,16 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const handlebars = require('express-handlebars')
+const app = express();
+
+
+//config
 const PORT = 8081;
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars')
+app.set('views','./views')
 
-
-app.get('/',(req, res) => {
-    res.sendFile(__dirname + "/html/index.html")
-})
-
-
-app.get('/ola/:nome',(req, res) => {
-    res.send(`olá, ${req.params.nome}`)
-})
-
-app.get('/sobre',(req, res) => {
-    res.sendFile(__dirname + "/html/sobre.html")
+app.get('/',(req,res)=>{
+    res.render('home');
 })
 
 app.listen(PORT, ()=>{
