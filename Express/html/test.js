@@ -21,6 +21,13 @@ const Postagem = sequelize.define('postagens',{
     }
 })
 
+//criar postagem
+
+Postagem.create({
+    titulo: 'Um titulo qualquer',
+    conteudo: 'Um conteudo qualquer'
+})
+
 //usuarios
 
 const Usuario = sequelize.define('usuarios',{
